@@ -8,15 +8,16 @@ import ModbusTcp from 'react-native-modbus-tcp';
 import { Text } from 'react-native-svg';
 
 
-export default function Bomba01() {
+export default function Bomba03() {
   const timer = 1000;
-  const DI0 = 0;//manual LH
-  const DI1 = 1;//automatico HH 
-  const DI2 = 4;//falha L
-  const DI3 = 10;//ligado/desligado LL
+  const DI0 = 4;//manual LH
+  const DI1 = 5;//automatico HH 
+  const DI2 = 6;//falha L
+  const DI3 = 12;//ligado/desligado LL
 
 const Host01 = "192.168.0.3" ;/** Endereço do modulo clp de onde seram lidos os endereços */
 const Host02 = "192.168.0.4" ;
+
 
 const [LL,setLL] =useState("#ff0000");
 const [L, setL]= useState("#ffff00");

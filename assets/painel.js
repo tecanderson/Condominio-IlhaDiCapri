@@ -45,7 +45,7 @@ function Painel(props,{children}) {
       <Path
         d="M1935.7358 763.13055H2559.99996V1440H1935.7358z"
         opacity={1}
-        fill="#fff"
+        fill={(!props.man&&!props.aut)?"#f00":(props.man)?"#ff0":"#fff"}
         fillOpacity={0.43961355}
         stroke="none"
         strokeWidth={9.33}
@@ -329,7 +329,7 @@ function Painel(props,{children}) {
         fontFamily="sans-serif"
         letterSpacing={0}
         wordSpacing={0}
-        fill="#000"
+        fill={(!props.man&&!props.aut)?"#fff":"#000"}
         fillOpacity={1}
         stroke="none"
       >
@@ -354,7 +354,7 @@ function Painel(props,{children}) {
         fontFamily="sans-serif"
         letterSpacing={0}
         wordSpacing={0}
-        fill="#000"
+        fill={(!props.man&&!props.aut)?"#fff":"#000"}
         fillOpacity={1}
         stroke="none"
       >
@@ -373,7 +373,7 @@ function Painel(props,{children}) {
         fontFamily="sans-serif"
         letterSpacing={0}
         wordSpacing={0}
-        fill="#000"
+        fill={(!props.man&&!props.aut)?"#fff":"#000"}
         fillOpacity={1}
         stroke="none"
       >
@@ -392,7 +392,7 @@ function Painel(props,{children}) {
         fontFamily="sans-serif"
         letterSpacing={0}
         wordSpacing={0}
-        fill="#000"
+        fill={(!props.man&&!props.aut)?"#fff":"#000"}
         fillOpacity={1}
         stroke="none"
       >
@@ -440,7 +440,7 @@ function Painel(props,{children}) {
         </TSpan>
       </Text>
     </Svg>
-        {children}
+        
     </>
   )
 }

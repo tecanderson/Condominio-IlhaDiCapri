@@ -7,7 +7,7 @@ import {Tkcolor} from '../services'
 import Level from '../../../assets/painel';
 
 
-export default function Bomba03({navigation}) {
+export default function Bomba04({navigation}) {
 /**variaves de estado que guarda a cor de cada nivel do tanque 
    sendo posteriormente alterada de acordo com o nivel ficando todas 
    com a mesma cor conforme o nivel sobe ou desce
@@ -23,21 +23,21 @@ quantidade de thread a ser criada */
 const Host01 = "192.168.0.3" ;/** Endereço do modulo clp de onde seram lidos os endereços */
 const Host02 = "192.168.0.4" ;
 /** entradas a serem monitoradas pelos listener's  */
-let DI0 = 'Di4';//automatico HH 
-let DI1 = 'Di5';//manual LH
-let DI2 = 'Di6';//falha L
-let DI3 = 'Di12';//ligado/desligado LL
+let DI0 = 8;//automatico HH 
+let DI1 = 9;//manual LH
+let DI2 = 7;//falha L
+let DI3 = 13;//ligado/desligado LL
 
-const initAdreshost01 = [4,5] ;/** lista de Endereços inicial de leitura do clp */
-const initAdreshost02 = [6,12] ;
-const { Di05:Di01,
-        Di6:Di02,
-        Di12:Di03,
-        Di04:Di00,
-        setDi05:setDi01,
-        setDi06:setDi02,
-        setDi12:setDi03,
-        setDi04:setDi00
+const initAdreshost01 = [8,9] ;/** lista de Endereços inicial de leitura do clp */
+const initAdreshost02 = [7,13] ;
+const { Di07:Di01,
+        Di07:Di02,
+        Di13:Di03,
+        Di06:Di00,
+        setDi07:setDi01,
+        setDi07:setDi02,
+        setDi13:setDi03,
+        setDi06:setDi00
     } = useCoilsContext();
 /** Adiciona e remove os listener's das entradas as serem lidas */
   useEffect(function() {
@@ -115,7 +115,7 @@ if (typeof (data[DI3]) !== 'undefined')
     
     <SafeAreaView >
        <View style={styles.conteiner}>
-       <Level width={width} height={heigth} LL={LL} L={L} aut={Di01} man={Di00} LH={LH} BombaName={"Bomba 03"}/>
+       <Level width={width} height={heigth} LL={LL} L={L} aut={Di01} man={Di00} LH={LH} BombaName={"Bomba 04"}/>
        </View>
 
     </SafeAreaView>

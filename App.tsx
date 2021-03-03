@@ -9,13 +9,8 @@ import 'react-native-gesture-handler';
  * @format
  */
 
-import React, { useState } from 'react';
-import {
-  SafeAreaView,
-  StyleSheet, 
-  StatusBar,
- 
-} from 'react-native';
+import React from 'react';
+
 import Routes from './routes';
 const App = () => {
    return (
